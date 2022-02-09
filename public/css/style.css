@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:wght@200;300;400;900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Piazzola", serif;
+}
+:root{
+    --main-bg:#DB4437;
+    --main-color:white;
+}
+html{
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.row{
+    margin: 0;
+}
+.navbar{
+    font-size: 15px;
+    color: #fff;
+    background-color: var(--main-bg);
+    padding: 2rem 0;
+}
+.navbar a{
+    color: #fff;
+    font-size: 1.8rem;
+}
+.navbar a:hover{
+    color: black;
+    font-size: 1.8rem;
+}
+
+h1{
+    text-align: center;
+    color: red;
+}
+p {
+    text-align: center;
+    color: blueviolet;
+    font-style: italic;
+}
+h3{
+    text-align: center;
+}
+.col-md-12{
+    text-align: center;
+}
+
+.footer{
+    background-color: black;
+    width: 100%;
+    height: 5rem;
+    margin-top: auto;
+    
+}
+footer h4{
+    color: white;
+    text-align: center;
+    line-height: 5rem;
+}
+.fa-snowflake {
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    color: var(--main-color);
+}
+.earth-image{
+    transition: all linear;
+    animation: rot 10s linear infinite;
+    height: 600px;
+    width: 600px;
+}
+.error-image-div{
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+.error-image-div button{
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: -4px 8px 6px -4px #000;
+    outline: none;
+    text-decoration: none;
+    background-color: white;
+}
+@keyframes rot {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.main_header_left{
+    height: 70rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.main_header_left .button{
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: -1px 8px 6px -4px #000;
+    outline: none;
+    text-decoration: none;
+    background-color: white;
+}
+.main_header_left .button:hover{
+    box-shadow: 0 8px 6px -3px var(--red);
+    color: black;
+    background-color: chocolate;
+}
+.main_header_right{
+    margin-top: 50px;
+    height: 70rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.main_header_right img{
+    filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.3));
+}
+
+/* Weather  */
+.tem-form inpu[type="submit"]:hover{
+    color: #DB4437;
+    background-color: white;
+}
+.tempinfo{
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 3rem rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    width: 40rem;
+    margin: auto;
+    min-height: 20rem;
+    background-color: rgba(6, 8, 14, 0.603);
+    border-radius: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 45rem;
+}
+.tempinfo:after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0, 0, 0);
+}
+.top-layer{
+    width: 100%;
+    height: 20%;
+    background-color: #050505f3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.top-layer p{
+    color: white;
+    font-weight: 300;
+}
+
+#day{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+#today_date{
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+.main_layer{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+}
+.main_layer #city-name{
+    padding: 2rem 0;
+    color: black;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.main_layer .middle_layer{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+.main_layer .middle_layer p {
+    font-size: 6rem;
+    font-weight: 900;
+    color: #000;
+}
+.main_layer .middle_layer .fas{
+    font-size: 15rem;
+    font-weight: 900;
+}
+sup{
+    font-size: 6rem;
+    margin-top: -2rem;
+    color: white;
+}
+.data_hide{
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+
+.temp-form{
+    width: 60%;
+    position: relative;
+    margin: 10rem auto 6rem;
+
+}
+.temp-form input[type="text"]{
+    width: 100%;
+    padding: 2rem 5rem 2rem 2rem;
+    background: #1e202b;
+    color: white;
+    border: none;
+    font-size: 1.8rem;
+    border-radius: 3rem;
+}
+::placeholder{
+    color: #bfc1c8;
+}
+
+.temp-form input[type="submit"]{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: none;
+    background: #009ad8;
+    padding: 0 3rem;
+    border-radius: 3rem;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.temp-form input[type="submit"]:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.wave {
+    opacity: 0.3;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    background: white;
+    width: 60rem;
+    height: 65rem;
+    margin-left: -25rem;
+    margin-top: -25rem;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+    z-index: 1;
+}
+
+.wave.three {
+    animation: drift 5000ms infinite linear;
+    z-index: 2 !important;
+    opacity: 0.2;
+}
+
+.wave.two {
+    animation: drift 7000ms infinite linear;
+    opacity: 0.1;
+    z-index: 3 !important;
+}
+
+.wave.one {
+    animation: drift 10000ms infinite linear;
+    opacity: 0.1;
+    z-index: 3 !important;
+}
+
+
+
+@keyframes drift {
+    from {
+        transform: rotate(0deg);
+    }
+
+    from {
+        transform: rotate(360deg);
+    }
+}
+
