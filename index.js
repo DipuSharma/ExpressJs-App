@@ -4,6 +4,7 @@ const app = express();
 const path = require('path');
 const hbs = require('hbs');
 const requests = require('requests');
+const port = process.env.PORT || 8001
 
 //  Builtin Middleware code
 const staticpath = path.join(__dirname, "/public");
@@ -49,6 +50,6 @@ app.get("/weather", (req, res) => {
 app.get('*', (req, res) => {
     res.render("404")
 })
-app.listen(8001, "127.0.0.1", () => {
+app.listen(port, "127.0.0.1", () => {
     console.log("Now Running Server 'Localhost', on 8001 Port");
 });
